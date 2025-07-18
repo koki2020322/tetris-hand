@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Tracking Tetris</title>
+    
+  <script type="module" crossorigin src="/assets/index-b1204317.js"></script>
+  <link rel="stylesheet" href="/assets/index-ab92b7b6.css">
+</head>
+<body>
+    <div id="app">
+        <div class="game-container">
+            <div class="tetris-section">
+                <canvas id="tetris-canvas" width="300" height="600"></canvas>
+                <div class="game-info">
+                    <div class="score">スコア: <span id="score">0</span></div>
+                    <div class="lines">ライン: <span id="lines">0</span></div>
+                </div>
+            </div>
+            <div class="camera-section">
+                <video id="camera-video" autoplay></video>
+                <canvas id="camera-canvas"></canvas>
+                <div class="gesture-info">
+                    <div class="gesture-status">
+                        手の検出: <span id="hand-status">待機中</span>
+                    </div>
+                    <div class="gesture-type">
+                        ジェスチャー: <span id="gesture-type">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn">ゲーム開始</button>
+            <button id="pause-btn" disabled>一時停止</button>
+        </div>
+    </div>
+    
+</body>
+</html>
